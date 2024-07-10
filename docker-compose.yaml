@@ -20,7 +20,7 @@ services:
       - MONGO_INITDB_ROOT_USERNAME=user
       - MONGO_INITDB_ROOT_PASSWORD=pass
     healthcheck:
-      test: mongosh mongodb://user:pass@mongodbcontainer:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+2.2.10
+      test: mongosh mongodb://user:pass@mongodbcontainer:27017/?directConnection=true&serverSelectionTimeoutMS=15000&appName=mongosh+2.2.10
       interval: 5s
       timeout: 5s
       retries: 15
